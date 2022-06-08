@@ -1,3 +1,25 @@
+/* couleur */
+/* general */
+html {
+  font-family: "Roboto", sans-serif;
+}
+html h1 {
+  font-family: "Shrikhand";
+}
+html a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin: 0%;
+}
+
+.flexcenter {
+  display: flex;
+  align-items: center;
+}
+
 /* image menu */
 .img_palette {
   background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
@@ -20,6 +42,24 @@
   background-size: cover;
   width: auto;
   height: 200px;
+}
+
+/* footer */
+footer {
+  background-color: #424847;
+  height: 300px;
+  padding: 10px;
+}
+footer h4 {
+  font-family: "Shrikhand";
+  font-size: 24px;
+  color: #fff;
+}
+footer ul {
+  list-style: none;
+}
+footer ul a {
+  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */
