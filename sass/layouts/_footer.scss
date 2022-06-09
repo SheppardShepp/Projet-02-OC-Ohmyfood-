@@ -1,0 +1,28 @@
+/* footer */
+
+footer{
+    background-color: $footfond;
+    height: 200px;
+    padding: 10px;
+    h4{
+        font-family: $titre;
+        font-size: 24px;
+        font-weight: lighter;
+        margin: 20px 0 20px 0;
+        color: $foottext;
+    }
+    ul{
+        list-style-type: none;
+        a{
+            color: $foottext;
+            width: fit-content;
+            margin: 10px 0 10px 0;
+            i{
+                margin-right: 10px;
+                width: 18px;
+            }
+        }
+        
+    }
+}
+
