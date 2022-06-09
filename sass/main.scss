@@ -4,4 +4,13 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 
-
+.formulaire{
+    height: 60px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #EEEFEF;
+    .formulaire_logo{
+        margin-right: 20px;
+        font-size: 22px;
+    }
+}
