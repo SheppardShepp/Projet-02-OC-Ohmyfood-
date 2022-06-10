@@ -5,6 +5,10 @@ html {
 html h1 {
   font-family: "Shrikhand";
 }
+html h3 {
+  font-size: 18px;
+  margin: 5px 0 5px 0;
+}
 html a {
   text-decoration: none;
   color: black;
@@ -14,10 +18,25 @@ body {
   margin: 0%;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+}
+
 .flexcenter {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.flexcolonne {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexbetween {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* image menu */
@@ -41,7 +60,8 @@ body {
   background-position: center;
   background-size: cover;
   width: auto;
-  height: 200px;
+  height: 175px;
+  border-radius: 15px 15px 0 0;
 }
 
 /* header */
@@ -49,7 +69,7 @@ header {
   height: 80px;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 10px #9B9B9B;
+  box-shadow: 0 0 10px black;
 }
 header .header_arrow {
   font-size: 30px;
@@ -60,6 +80,105 @@ header .header_logo {
   width: 200px;
   display: block;
   margin: auto;
+}
+
+.section_1 {
+  height: 320px;
+}
+.section_1 .formulaire {
+  height: 60px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #d8dad9;
+  opacity: 0.7;
+}
+.section_1 .formulaire .formulaire_logo {
+  margin-right: 20px;
+  font-size: 22px;
+}
+.section_1 .explorer {
+  text-align: center;
+  height: 250px;
+  background-color: #f5f4f4;
+}
+.section_1 .explorer h2 {
+  width: 60%;
+}
+.section_1 .explorer p {
+  width: 80%;
+}
+.section_1 .explorer a {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 50px 50px 50px 50px;
+  margin: 15px 0 30px 0;
+  font-size: 14px;
+  color: #ffffff;
+  width: 200px;
+  height: 40px;
+}
+
+.section_2 {
+  height: 420px;
+  padding: 20px;
+}
+.section_2 .btn_filtre {
+  width: 90%;
+  height: 70px;
+  background-color: #f5f4f4;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px 2px #d6d6d6;
+  margin: 15px 0 15px 0;
+}
+.section_2 .btn_filtre .btn-chiffre {
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: #9356DC;
+  color: #ffffff;
+  margin-left: -15px;
+}
+.section_2 .btn_filtre i {
+  margin: 0 25px 0 25px;
+  opacity: 0.7;
+}
+.section_2 .btn_filtre span {
+  font-weight: bold;
+}
+
+.section_3 {
+  padding: 20px;
+  background-color: #f5f4f4;
+}
+.section_3 .art_resto {
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 15px 2px #d6d6d6;
+  margin-bottom: 20px;
+}
+.section_3 .art_resto span {
+  position: relative;
+  top: 20px;
+  right: -240px;
+  width: 80px;
+  height: 35px;
+  background-color: #99E2D0;
+  font-weight: bold;
+}
+.section_3 .art_resto .art_textbloc {
+  height: 80px;
+}
+.section_3 .art_resto .art_textbloc .art_text {
+  margin-left: 15px;
+}
+.section_3 .art_resto .art_textbloc .art_text p {
+  font-size: 18px;
+  margin: 5px 0 5px 0;
+}
+.section_3 .art_resto .art_textbloc i {
+  text-align: center;
+  font-size: 27px;
+  width: 40px;
+  margin-right: 25px;
 }
 
 /* footer */
@@ -73,30 +192,19 @@ footer h4 {
   font-size: 24px;
   font-weight: lighter;
   margin: 20px 0 20px 0;
-  color: #fff;
+  color: #ffffff;
 }
 footer ul {
   list-style-type: none;
 }
 footer ul a {
-  color: #fff;
+  color: #ffffff;
   width: fit-content;
   margin: 10px 0 10px 0;
 }
 footer ul a i {
   margin-right: 10px;
   width: 18px;
-}
-
-.formulaire {
-  height: 60px;
-  font-size: 18px;
-  font-weight: 600;
-  background-color: #EEEFEF;
-}
-.formulaire .formulaire_logo {
-  margin-right: 20px;
-  font-size: 22px;
 }
 
 /*# sourceMappingURL=styles.css.map */

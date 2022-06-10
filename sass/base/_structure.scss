@@ -4,19 +4,35 @@ html{
     h1{
         font-family: $titre;
     }
+    h3{
+        font-size: 18px;
+        margin: 5px 0 5px 0;
+    }
     a{
 	    text-decoration: none;
 	    color: $lien;
     }
+
 }
 body{
     margin: 0%;
 }
-
+.flex{
+    display: flex;
+    align-items: center;
+}
 .flexcenter{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.flexcolonne{
+    display: flex;
+    flex-direction: column;
+}
+.flexbetween{
+    display: flex;
+    justify-content: space-between;
 }
 
 /* image menu */
@@ -36,5 +52,6 @@ body{
 	background-position:center;
 	background-size: cover;
     width: auto;
-    height: 200px;
+    height: 175px;
+    border-radius: 15px 15px 0 0;
 }
