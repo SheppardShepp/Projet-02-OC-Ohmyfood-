@@ -1,0 +1,66 @@
+.main_bloc{
+    background-color: $fondgris;
+    height: 1500px;
+    a{
+        @include btn_valid;
+    }
+    h2{
+        font-size: 17px;
+    }
+    .img_restau{
+        background-position:center;
+        background-size: cover;
+        width: auto;
+        height: 250px;
+        border-radius:0;
+    }
+    .main_restau{
+        background-color: $fondgris;
+        margin-top: -40px;
+        border-radius: 35px 35px 0 0;
+        padding: 20px;
+        i{
+            font-size: 26px;
+            width: 40px;
+        }
+    }
+    section{
+        height: 350px;
+        background-color: $fondgris;
+        article{
+            width: 95%;
+            height: 70px;
+            margin: 10px 0 10px 0;
+            cursor: pointer;
+            background-color: $fondtext;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px 2px $shadow;
+            i{
+                display: none;
+            }
+            .article_bloctext{
+                width: 100%;
+                padding: 5px 20px 5px 10px;
+                h3{
+                    font-size: 16px;
+                    margin: 5px;
+                }
+                .article_text{
+                    font-size: 14px;
+                    margin: 5px;
+                    p{
+                        margin: 0;
+                        font-weight: bold;
+                    }
+                }
+            }            
+        }
+    
+        article:hover{
+            i{
+                display: flex;
+                @include btn_hover;
+            }
+        }
+    }    
+}

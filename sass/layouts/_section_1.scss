@@ -22,14 +22,7 @@
             width: 80%;
         }
         a{
-            background: linear-gradient(to bottom right, $secondaire, $primaire);
-            border-radius: 50px 50px 50px 50px;
-            margin: 15px 0 30px 0;
-            font-size: 14px;
-            color: $fondtext;
-            width: 200px;
-            height: 40px;
-            
+            @include btn_valid;
         }
     }
 }

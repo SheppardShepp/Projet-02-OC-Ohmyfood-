@@ -4,6 +4,8 @@ html {
 }
 html h1 {
   font-family: "Shrikhand";
+  font-size: 28px;
+  font-weight: 500;
 }
 html h3 {
   font-size: 18px;
@@ -36,6 +38,7 @@ body {
 
 .flexbetween {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -62,6 +65,82 @@ body {
   width: auto;
   height: 175px;
   border-radius: 15px 15px 0 0;
+}
+
+.main_bloc {
+  background-color: #f5f4f4;
+  height: 1500px;
+}
+.main_bloc a {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 50px 50px 50px 50px;
+  margin: 15px 0 30px 0;
+  font-size: 14px;
+  color: #ffffff;
+  width: 200px;
+  height: 40px;
+}
+.main_bloc h2 {
+  font-size: 17px;
+}
+.main_bloc .img_restau {
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  height: 250px;
+  border-radius: 0;
+}
+.main_bloc .main_restau {
+  background-color: #f5f4f4;
+  margin-top: -40px;
+  border-radius: 35px 35px 0 0;
+  padding: 20px;
+}
+.main_bloc .main_restau i {
+  font-size: 26px;
+  width: 40px;
+}
+.main_bloc section {
+  height: 350px;
+  background-color: #f5f4f4;
+}
+.main_bloc section article {
+  width: 95%;
+  height: 70px;
+  margin: 10px 0 10px 0;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px 2px #d6d6d6;
+}
+.main_bloc section article i {
+  display: none;
+}
+.main_bloc section article .article_bloctext {
+  width: 100%;
+  padding: 5px 20px 5px 10px;
+}
+.main_bloc section article .article_bloctext h3 {
+  font-size: 16px;
+  margin: 5px;
+}
+.main_bloc section article .article_bloctext .article_text {
+  font-size: 14px;
+  margin: 5px;
+}
+.main_bloc section article .article_bloctext .article_text p {
+  margin: 0;
+  font-weight: bold;
+}
+.main_bloc section article:hover i {
+  display: flex;
+  width: 80px;
+  height: 100%;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 0 15px 15px 0;
+  color: #ffffff;
+  background-color: #99E2D0;
 }
 
 /* header */
