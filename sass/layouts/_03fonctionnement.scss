@@ -12,6 +12,9 @@
             margin: 15px 0 15px 0;
             @include shadow;
             @include flex;
+            &:hover{
+                background-color: $primaire;
+            }
             .btn_chiffre{
                 width: 25px;
                 height: 25px;

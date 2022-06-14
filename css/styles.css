@@ -108,6 +108,9 @@ header .header_logo {
   display: flex;
   align-items: center;
 }
+.fonctionnement .fonctionnement_menu .btn_filtre:hover {
+  background-color: #9356DC;
+}
 .fonctionnement .fonctionnement_menu .btn_filtre .btn_chiffre {
   width: 25px;
   height: 25px;
