@@ -6,6 +6,7 @@
     color: $fondtext;
     width: 200px;
     height: 40px;
+    @include flexcenter;
 }
 @mixin btn_hover {
     width: 80px;
@@ -15,4 +16,31 @@
     border-radius: 0 15px 15px 0;
     color:$fondtext;
     background-color: $tertiare;
+}
+@mixin padding_bloc {
+    padding: 20px;
+}
+@mixin shadow {
+    box-shadow: 0px 5px 15px 2px $shadow;
+}
+@mixin block_img {
+    background-position:center;
+    background-size: cover;
+    width: auto;
+}
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+@mixin flexcolonne{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flexcenter{
+    @include flex;
+    justify-content: center;
+}
+@mixin flexbetween{
+    @include flex;
+    justify-content: space-between;
 }

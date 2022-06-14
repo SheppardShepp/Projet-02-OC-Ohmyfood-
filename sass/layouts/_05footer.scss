@@ -3,7 +3,7 @@
 footer{
     background-color: $footfond;
     height: 200px;
-    padding: 10px;
+    @include padding_bloc;
     h4{
         font-family: $titre;
         font-size: 24px;
@@ -17,6 +17,7 @@ footer{
             color: $fondtext;
             width: fit-content;
             margin: 10px 0 10px 0;
+            @include flexcenter;
             i{
                 margin-right: 10px;
                 width: 18px;

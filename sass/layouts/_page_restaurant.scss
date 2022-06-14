@@ -8,25 +8,28 @@
         font-size: 17px;
     }
     .img_restau{
-        background-position:center;
-        background-size: cover;
-        width: auto;
         height: 250px;
         border-radius:0;
+        @include block_img;
     }
     .main_restau{
         background-color: $fondgris;
         margin-top: -40px;
         border-radius: 35px 35px 0 0;
-        padding: 20px;
+        @include padding_bloc;
+        @include flexbetween;
+        @include flexcenter;
         i{
             font-size: 26px;
             width: 40px;
+            @include flexcenter;
         }
     }
     section{
         height: 350px;
         background-color: $fondgris;
+        @include flexcolonne;
+        @include flexcenter;
         article{
             width: 95%;
             height: 70px;
@@ -34,7 +37,8 @@
             cursor: pointer;
             background-color: $fondtext;
             border-radius: 15px;
-            box-shadow: 0px 5px 15px 2px $shadow;
+            @include shadow;
+            @include flex;
             i{
                 display: none;
             }
@@ -48,6 +52,7 @@
                 .article_text{
                     font-size: 14px;
                     margin: 5px;
+                    @include flexbetween;
                     p{
                         margin: 0;
                         font-weight: bold;
@@ -60,7 +65,11 @@
             i{
                 display: flex;
                 @include btn_hover;
+                @include flexcenter;
             }
         }
-    }    
+    }
+    .btn_validateur{
+        @include flexcenter;
+    }
 }

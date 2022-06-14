@@ -20,26 +20,161 @@ body {
   margin: 0%;
 }
 
-.flex {
+/* header */
+header {
+  height: 80px;
   display: flex;
   align-items: center;
+  box-shadow: 0 0 10px black;
+}
+header .header_arrow {
+  font-size: 30px;
+  margin-left: 30px;
+  position: absolute;
+}
+header .header_logo {
+  width: 200px;
+  display: block;
+  margin: auto;
 }
 
-.flexcenter {
+.localisation {
+  height: 320px;
+}
+.localisation .formulaire {
+  height: 60px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #d8dad9;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.localisation .formulaire .formulaire_logo {
+  margin-right: 20px;
+  font-size: 22px;
+}
+.localisation .explorer {
+  text-align: center;
+  height: 250px;
+  background-color: #f5f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.localisation .explorer h2 {
+  width: 60%;
+}
+.localisation .explorer p {
+  width: 80%;
+}
+.localisation .explorer a {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 50px 50px 50px 50px;
+  margin: 15px 0 30px 0;
+  font-size: 14px;
+  color: #ffffff;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.flexcolonne {
+.fonctionnement {
+  height: 420px;
+  padding: 20px;
+}
+.fonctionnement .fonctionnement_menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
 }
+.fonctionnement .fonctionnement_menu .btn_filtre {
+  width: 90%;
+  height: 70px;
+  background-color: #f5f4f4;
+  border-radius: 20px;
+  margin: 15px 0 15px 0;
+  box-shadow: 0px 5px 15px 2px #d6d6d6;
+  display: flex;
+  align-items: center;
+}
+.fonctionnement .fonctionnement_menu .btn_filtre .btn_chiffre {
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: #9356DC;
+  color: #ffffff;
+  margin-left: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fonctionnement .fonctionnement_menu .btn_filtre i {
+  margin: 0 25px 0 25px;
+  opacity: 0.7;
+}
+.fonctionnement .fonctionnement_menu .btn_filtre span {
+  font-weight: bold;
+}
 
-.flexbetween {
+.carte_restaurant {
+  background-color: #f5f4f4;
+  padding: 20px;
+}
+.carte_restaurant .art_resto {
+  border-radius: 15px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 15px 2px #d6d6d6;
+}
+.carte_restaurant .art_resto .img {
+  position: relative;
+  height: 175px;
+  border-radius: 15px 15px 0 0;
+  background-position: center;
+  background-size: cover;
+  width: auto;
+}
+.carte_restaurant .art_resto .img span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: 35px;
+  background-color: #99E2D0;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carte_restaurant .art_resto .art_textbloc {
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.carte_restaurant .art_resto .art_textbloc .art_text {
+  margin-left: 15px;
+}
+.carte_restaurant .art_resto .art_textbloc .art_text p {
+  font-size: 18px;
+  margin: 5px 0 5px 0;
+}
+.carte_restaurant .art_resto .art_textbloc i {
+  text-align: center;
+  font-size: 27px;
+  width: 40px;
+  margin-right: 25px;
 }
 
 /* image menu */
@@ -59,212 +194,11 @@ body {
   background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
 
-.img {
-  background-position: center;
-  background-size: cover;
-  width: auto;
-  height: 175px;
-  border-radius: 15px 15px 0 0;
-}
-
-.main_bloc {
-  background-color: #f5f4f4;
-  height: 1500px;
-}
-.main_bloc a {
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  border-radius: 50px 50px 50px 50px;
-  margin: 15px 0 30px 0;
-  font-size: 14px;
-  color: #ffffff;
-  width: 200px;
-  height: 40px;
-}
-.main_bloc h2 {
-  font-size: 17px;
-}
-.main_bloc .img_restau {
-  background-position: center;
-  background-size: cover;
-  width: auto;
-  height: 250px;
-  border-radius: 0;
-}
-.main_bloc .main_restau {
-  background-color: #f5f4f4;
-  margin-top: -40px;
-  border-radius: 35px 35px 0 0;
-  padding: 20px;
-}
-.main_bloc .main_restau i {
-  font-size: 26px;
-  width: 40px;
-}
-.main_bloc section {
-  height: 350px;
-  background-color: #f5f4f4;
-}
-.main_bloc section article {
-  width: 95%;
-  height: 70px;
-  margin: 10px 0 10px 0;
-  cursor: pointer;
-  background-color: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0px 5px 15px 2px #d6d6d6;
-}
-.main_bloc section article i {
-  display: none;
-}
-.main_bloc section article .article_bloctext {
-  width: 100%;
-  padding: 5px 20px 5px 10px;
-}
-.main_bloc section article .article_bloctext h3 {
-  font-size: 16px;
-  margin: 5px;
-}
-.main_bloc section article .article_bloctext .article_text {
-  font-size: 14px;
-  margin: 5px;
-}
-.main_bloc section article .article_bloctext .article_text p {
-  margin: 0;
-  font-weight: bold;
-}
-.main_bloc section article:hover i {
-  display: flex;
-  width: 80px;
-  height: 100%;
-  font-size: 22px;
-  cursor: pointer;
-  border-radius: 0 15px 15px 0;
-  color: #ffffff;
-  background-color: #99E2D0;
-}
-
-/* header */
-header {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 0 10px black;
-}
-header .header_arrow {
-  font-size: 30px;
-  margin-left: 30px;
-  position: absolute;
-}
-header .header_logo {
-  width: 200px;
-  display: block;
-  margin: auto;
-}
-
-.section_1 {
-  height: 320px;
-}
-.section_1 .formulaire {
-  height: 60px;
-  font-size: 18px;
-  font-weight: 600;
-  background-color: #d8dad9;
-  opacity: 0.7;
-}
-.section_1 .formulaire .formulaire_logo {
-  margin-right: 20px;
-  font-size: 22px;
-}
-.section_1 .explorer {
-  text-align: center;
-  height: 250px;
-  background-color: #f5f4f4;
-}
-.section_1 .explorer h2 {
-  width: 60%;
-}
-.section_1 .explorer p {
-  width: 80%;
-}
-.section_1 .explorer a {
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  border-radius: 50px 50px 50px 50px;
-  margin: 15px 0 30px 0;
-  font-size: 14px;
-  color: #ffffff;
-  width: 200px;
-  height: 40px;
-}
-
-.section_2 {
-  height: 420px;
-  padding: 20px;
-}
-.section_2 .btn_filtre {
-  width: 90%;
-  height: 70px;
-  background-color: #f5f4f4;
-  border-radius: 20px;
-  box-shadow: 0px 5px 15px 2px #d6d6d6;
-  margin: 15px 0 15px 0;
-}
-.section_2 .btn_filtre .btn_chiffre {
-  width: 25px;
-  height: 25px;
-  border-radius: 20px;
-  background-color: #9356DC;
-  color: #ffffff;
-  margin-left: -15px;
-}
-.section_2 .btn_filtre i {
-  margin: 0 25px 0 25px;
-  opacity: 0.7;
-}
-.section_2 .btn_filtre span {
-  font-weight: bold;
-}
-
-.section_3 {
-  padding: 20px;
-  background-color: #f5f4f4;
-}
-.section_3 .art_resto {
-  border-radius: 15px;
-  background-color: #ffffff;
-  box-shadow: 0px 5px 15px 2px #d6d6d6;
-  margin-bottom: 20px;
-}
-.section_3 .art_resto span {
-  position: relative;
-  top: 20px;
-  right: -240px;
-  width: 80px;
-  height: 35px;
-  background-color: #99E2D0;
-  font-weight: bold;
-}
-.section_3 .art_resto .art_textbloc {
-  height: 80px;
-}
-.section_3 .art_resto .art_textbloc .art_text {
-  margin-left: 15px;
-}
-.section_3 .art_resto .art_textbloc .art_text p {
-  font-size: 18px;
-  margin: 5px 0 5px 0;
-}
-.section_3 .art_resto .art_textbloc i {
-  text-align: center;
-  font-size: 27px;
-  width: 40px;
-  margin-right: 25px;
-}
-
 /* footer */
 footer {
   background-color: #424847;
   height: 200px;
-  padding: 10px;
+  padding: 20px;
 }
 footer h4 {
   font-family: "Shrikhand";
@@ -280,10 +214,119 @@ footer ul a {
   color: #ffffff;
   width: fit-content;
   margin: 10px 0 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 footer ul a i {
   margin-right: 10px;
   width: 18px;
+}
+
+.main_bloc {
+  background-color: #f5f4f4;
+  height: 1500px;
+}
+.main_bloc a {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 50px 50px 50px 50px;
+  margin: 15px 0 30px 0;
+  font-size: 14px;
+  color: #ffffff;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_bloc h2 {
+  font-size: 17px;
+}
+.main_bloc .img_restau {
+  height: 250px;
+  border-radius: 0;
+  background-position: center;
+  background-size: cover;
+  width: auto;
+}
+.main_bloc .main_restau {
+  background-color: #f5f4f4;
+  margin-top: -40px;
+  border-radius: 35px 35px 0 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_bloc .main_restau i {
+  font-size: 26px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_bloc section {
+  height: 350px;
+  background-color: #f5f4f4;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_bloc section article {
+  width: 95%;
+  height: 70px;
+  margin: 10px 0 10px 0;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px 2px #d6d6d6;
+  display: flex;
+  align-items: center;
+}
+.main_bloc section article i {
+  display: none;
+}
+.main_bloc section article .article_bloctext {
+  width: 100%;
+  padding: 5px 20px 5px 10px;
+}
+.main_bloc section article .article_bloctext h3 {
+  font-size: 16px;
+  margin: 5px;
+}
+.main_bloc section article .article_bloctext .article_text {
+  font-size: 14px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_bloc section article .article_bloctext .article_text p {
+  margin: 0;
+  font-weight: bold;
+}
+.main_bloc section article:hover i {
+  display: flex;
+  width: 80px;
+  height: 100%;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 0 15px 15px 0;
+  color: #ffffff;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_bloc .btn_validateur {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
