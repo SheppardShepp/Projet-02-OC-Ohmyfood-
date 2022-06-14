@@ -8,15 +8,15 @@
             width: 90%;
             height: 70px;
             background-color: $fondgris;
-            border-radius: 20px;
+            border-radius: $btnraduis;
             margin: 15px 0 15px 0;
             @include shadow;
             @include flex;
             .btn_chiffre{
                 width: 25px;
                 height: 25px;
-                border-radius: 20px;
                 background-color: $primaire;
+                border-radius: $btnraduis;
                 color: $fondtext;
                 margin-left: -15px;
                 @include flexcenter;

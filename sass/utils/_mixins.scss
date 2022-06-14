@@ -1,21 +1,21 @@
 @mixin btn_valid {
-    background: linear-gradient(to bottom right, $secondaire, $primaire);
-    border-radius: 50px 50px 50px 50px;
-    margin: 15px 0 30px 0;
-    font-size: 14px;
-    color: $fondtext;
     width: 200px;
     height: 40px;
+    background: linear-gradient(to bottom right, $secondaire, $primaire);
+    color: $fondtext;
+    border-radius: $btnraduis;
+    margin: 15px 0 30px 0;
+    font-size: 14px;
     @include flexcenter;
 }
 @mixin btn_hover {
     width: 80px;
     height: 100%;
-    font-size: 22px;
-    cursor: pointer;
-    border-radius: 0 15px 15px 0;
-    color:$fondtext;
     background-color: $tertiare;
+    color:$fondtext;
+    font-size: 22px;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
 }
 @mixin padding_bloc {
     padding: 20px;
