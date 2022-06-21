@@ -2,9 +2,10 @@
 @import "./utils/mixins";
 @import "./base/police";
 @import "./base/structure";
+@import "./base/page_chargement";
+@import "./components/bouton.scss";
 @import "./layouts/01header";
 @import "./layouts/02localisation";
-@import "./layouts/03fonctionnement";
 @import "./layouts/04carte_restaurant";
 @import "./layouts/05footer";
 @import "./layouts/page_restaurant";

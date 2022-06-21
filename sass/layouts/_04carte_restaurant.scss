@@ -1,12 +1,28 @@
+/* Section fonctionnement */
+.fonctionnement{
+    height: 420px;
+    @include padding_bloc;
+    &_menu{
+        @include flexcenter;
+        @include flexcolonne;
+        span{
+            font-weight: bold;
+        }
+    }  
+}
+/* Section restaurant page de garde */
 .carte_restaurant{
     background-color: $fondgris;
     @include padding_bloc;
-    .art_resto{
+
+    /* cartes restaurant de la page de garde */
+    .carte{
         border-radius: 15px;
 	    background-color: $fondtext;
         margin-bottom: 20px;
         @include shadow;
-        .img{
+        position: relative;
+        &_img{
             position: relative;
             height: 175px;
             border-radius: 15px 15px 0 0;
@@ -17,39 +33,30 @@
                 width: 80px;
                 height: 35px;
                 background-color: $tertiare;
+                color: $colornews;
                 font-weight: bold;
                 @include flexcenter;
             }
         }
-        .art_textbloc{
+
+        /* bloc texte des cartes de la page de garde */
+        &_bloc{
+            min-width: 160px;
             height: 80px;
-            @include flexbetween;
-            .art_text{
+            @include flex;
+            position: relative;
+            a{
+                width: 100%;
+                height: 100%;
+                @include flex;
+            }
+            &_text{
                 margin-left: 15px;
                 p{
                     font-size: 18px;
                     margin: 5px 0 5px 0;
                 }
             }
-            i{
-                text-align: center;
-                font-size: 27px;
-                width: 40px;
-                margin-right: 25px;
-            }
         }
     }
-}
-/* image menu */
-.img_palette{
-    background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-}
-.img_lanote{
-    background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-}
-.img_franc{
-    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-}
-.img_delice{
-    background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }

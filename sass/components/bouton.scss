@@ -1,0 +1,61 @@
+/* Bouton validation */
+.btn_valid {
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(to bottom right, $secondaire, $primaire);
+    color: $fondtext;
+    border-radius: $btnraduis;
+    margin: 15px 0 30px 0;
+    font-size: 14px;
+    @include flexcenter;
+    transition: transform 0.2s;
+    &:hover{
+        transform: scale(1.15);
+    }
+}
+/* bouton du filtre */
+.btn{
+    width: 90%;
+    height: 70px;
+    background-color: $fondgris;
+    border-radius: $btnraduis;
+    margin: 15px 0 15px 0;
+    @include shadow;
+    @include flex;
+    &:hover{
+        background-color: $primaire-opaque;
+        i{
+        color: $primaire;
+        }
+    }
+    &_chiffre{
+        width: 25px;
+        height: 25px;
+        background-color: $primaire;
+        border-radius: $btnraduis;
+        color: $fondtext;
+        margin-left: -15px;
+        @include flexcenter;
+    }
+    i{
+        margin: 0 25px 0 25px;
+        opacity: 0.8;
+    }
+}
+/* Bouton favoris */
+.carte_bloc{
+    &_coeurvide{
+        @include coeur;
+    }
+    &_coeurplein{
+        @include coeur;
+        background:linear-gradient(0deg, $primaire, $secondaire);
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 0;
+        transition: opacity 0.5s;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}

@@ -1,3 +1,8 @@
+/* Couleur du projet */
+/* couleur de fond */
+/* couleur texte */
+/* couleur d'effet */
+/* contour */
 /* general */
 html {
   font-family: "Roboto", sans-serif;
@@ -18,6 +23,100 @@ html a {
 
 body {
   margin: 0%;
+}
+
+/* image menu */
+.img_palette {
+  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+
+.img_lanote {
+  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+
+.img_franc {
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+.img_delice {
+  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+
+/* Bouton validation */
+.btn_valid {
+  width: 200px;
+  height: 40px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: #ffffff;
+  border-radius: 20px;
+  margin: 15px 0 30px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+.btn_valid:hover {
+  transform: scale(1.15);
+}
+
+/* bouton du filtre */
+.btn {
+  width: 90%;
+  height: 70px;
+  background-color: #f5f4f4;
+  border-radius: 20px;
+  margin: 15px 0 15px 0;
+  box-shadow: 0px 5px 15px 2px #d6d6d6;
+  display: flex;
+  align-items: center;
+}
+.btn:hover {
+  background-color: rgba(147, 86, 220, 0.2);
+}
+.btn:hover i {
+  color: #9356DC;
+}
+.btn_chiffre {
+  width: 25px;
+  height: 25px;
+  background-color: #9356DC;
+  border-radius: 20px;
+  color: #ffffff;
+  margin-left: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn i {
+  margin: 0 25px 0 25px;
+  opacity: 0.8;
+}
+
+/* Bouton favoris */
+.carte_bloc_coeurvide {
+  text-align: center;
+  font-size: 27px;
+  width: 40px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.carte_bloc_coeurplein {
+  text-align: center;
+  font-size: 27px;
+  width: 40px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.carte_bloc_coeurplein:hover {
+  opacity: 1;
 }
 
 /* header */
@@ -51,7 +150,7 @@ header .header_logo {
   align-items: center;
   justify-content: center;
 }
-.localisation .formulaire .formulaire_logo {
+.localisation .formulaire_logo {
   margin-right: 20px;
   font-size: 22px;
 }
@@ -72,75 +171,42 @@ header .header_logo {
   width: 80%;
 }
 .localisation .explorer a {
-  width: 200px;
-  height: 40px;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  color: #ffffff;
-  border-radius: 20px;
-  margin: 15px 0 30px 0;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Section fonctionnement */
 .fonctionnement {
   height: 420px;
   padding: 20px;
 }
-.fonctionnement .fonctionnement_menu {
+.fonctionnement_menu {
   display: flex;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
 }
-.fonctionnement .fonctionnement_menu .btn_filtre {
-  width: 90%;
-  height: 70px;
-  background-color: #f5f4f4;
-  border-radius: 20px;
-  margin: 15px 0 15px 0;
-  box-shadow: 0px 5px 15px 2px #d6d6d6;
-  display: flex;
-  align-items: center;
-}
-.fonctionnement .fonctionnement_menu .btn_filtre:hover {
-  background-color: #9356DC;
-}
-.fonctionnement .fonctionnement_menu .btn_filtre .btn_chiffre {
-  width: 25px;
-  height: 25px;
-  background-color: #9356DC;
-  border-radius: 20px;
-  color: #ffffff;
-  margin-left: -15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.fonctionnement .fonctionnement_menu .btn_filtre i {
-  margin: 0 25px 0 25px;
-  opacity: 0.7;
-}
-.fonctionnement .fonctionnement_menu .btn_filtre span {
+.fonctionnement_menu span {
   font-weight: bold;
 }
 
+/* Section restaurant page de garde */
 .carte_restaurant {
   background-color: #f5f4f4;
   padding: 20px;
+  /* cartes restaurant de la page de garde */
 }
-.carte_restaurant .art_resto {
+.carte_restaurant .carte {
   border-radius: 15px;
   background-color: #ffffff;
   margin-bottom: 20px;
   box-shadow: 0px 5px 15px 2px #d6d6d6;
+  position: relative;
+  /* bloc texte des cartes de la page de garde */
 }
-.carte_restaurant .art_resto .img {
+.carte_restaurant .carte_img {
   position: relative;
   height: 175px;
   border-radius: 15px 15px 0 0;
@@ -148,53 +214,38 @@ header .header_logo {
   background-size: cover;
   width: auto;
 }
-.carte_restaurant .art_resto .img span {
+.carte_restaurant .carte_img span {
   position: absolute;
   top: 20px;
   right: 20px;
   width: 80px;
   height: 35px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
+  color: #2c9c81;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.carte_restaurant .art_resto .art_textbloc {
+.carte_restaurant .carte_bloc {
+  min-width: 160px;
   height: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  position: relative;
 }
-.carte_restaurant .art_resto .art_textbloc .art_text {
+.carte_restaurant .carte_bloc a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.carte_restaurant .carte_bloc_text {
   margin-left: 15px;
 }
-.carte_restaurant .art_resto .art_textbloc .art_text p {
+.carte_restaurant .carte_bloc_text p {
   font-size: 18px;
   margin: 5px 0 5px 0;
-}
-.carte_restaurant .art_resto .art_textbloc i {
-  text-align: center;
-  font-size: 27px;
-  width: 40px;
-  margin-right: 25px;
-}
-
-/* image menu */
-.img_palette {
-  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-}
-
-.img_lanote {
-  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-}
-
-.img_franc {
-  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-}
-
-.img_delice {
-  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
 
 /* footer */
@@ -226,33 +277,21 @@ footer ul a i {
   width: 18px;
 }
 
-.main_bloc {
+.main {
   background-color: #f5f4f4;
   height: 1500px;
 }
-.main_bloc a {
-  width: 200px;
-  height: 40px;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  color: #ffffff;
-  border-radius: 20px;
-  margin: 15px 0 30px 0;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.main_bloc h2 {
+.main h2 {
   font-size: 17px;
 }
-.main_bloc .img_restau {
+.main_img {
   height: 250px;
   border-radius: 0;
   background-position: center;
   background-size: cover;
   width: auto;
 }
-.main_bloc .main_restau {
+.main_restau {
   background-color: #f5f4f4;
   margin-top: -40px;
   border-radius: 35px 35px 0 0;
@@ -264,14 +303,14 @@ footer ul a i {
   align-items: center;
   justify-content: center;
 }
-.main_bloc .main_restau i {
+.main_restau i {
   font-size: 26px;
   width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.main_bloc section {
+.main section {
   height: 350px;
   background-color: #f5f4f4;
   display: flex;
@@ -280,7 +319,7 @@ footer ul a i {
   align-items: center;
   justify-content: center;
 }
-.main_bloc section article {
+.main section article {
   width: 95%;
   height: 70px;
   margin: 10px 0 10px 0;
@@ -291,33 +330,11 @@ footer ul a i {
   display: flex;
   align-items: center;
 }
-.main_bloc section article i {
-  display: none;
-}
-.main_bloc section article .article_bloctext {
-  width: 100%;
-  padding: 5px 20px 5px 10px;
-}
-.main_bloc section article .article_bloctext h3 {
-  font-size: 16px;
-  margin: 5px;
-}
-.main_bloc section article .article_bloctext .article_text {
-  font-size: 14px;
-  margin: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.main_bloc section article .article_bloctext .article_text p {
-  margin: 0;
-  font-weight: bold;
-}
-.main_bloc section article:hover i {
+.main section article:hover i {
   display: flex;
   width: 80px;
   height: 100%;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #ffffff;
   font-size: 22px;
   border-radius: 0 15px 15px 0;
@@ -326,7 +343,30 @@ footer ul a i {
   align-items: center;
   justify-content: center;
 }
-.main_bloc .btn_validateur {
+.main section article i {
+  display: none;
+}
+.main section article .article {
+  width: 100%;
+  padding: 5px 20px 5px 10px;
+}
+.main section article .article h3 {
+  font-size: 16px;
+  margin: 5px;
+}
+.main section article .article_text {
+  font-size: 14px;
+  margin: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main section article .article_text p {
+  margin: 0;
+  font-weight: bold;
+}
+.main .btn_validateur {
   display: flex;
   align-items: center;
   justify-content: center;
