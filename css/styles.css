@@ -42,6 +42,120 @@ body {
   background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
 
+.loader {
+  background-color: rgba(245, 244, 244, 0.8);
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  height: 100%;
+  animation: loading 4s forwards;
+}
+.loader_lettre .lettre_1 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: -90px;
+  animation-delay: 0.2s;
+}
+.loader_lettre .lettre_2 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: -65px;
+  animation-delay: 0.4s;
+}
+.loader_lettre .lettre_3 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: -35px;
+  animation-delay: 0.6s;
+}
+.loader_lettre .lettre_4 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: -6px;
+  animation-delay: 0.8s;
+}
+.loader_lettre .lettre_5 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: 12px;
+  animation-delay: 1s;
+}
+.loader_lettre .lettre_6 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: 30px;
+  animation-delay: 1.2s;
+}
+.loader_lettre .lettre_7 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: 53px;
+  animation-delay: 1.4s;
+}
+.loader_lettre .lettre_8 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: 76px;
+  animation-delay: 1.6s;
+}
+.loader_lettre h1 {
+  position: absolute;
+  font-size: 35px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: texte 1.5s ease-in-out;
+}
+.loader_cercle {
+  position: absolute;
+  border-top: 7px solid #9356DC;
+  border-right: 7px solid #99e2d0;
+  border-bottom: 7px solid #FF79DA;
+  border-left: 7px solid #99e2d0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  top: 5%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: anim 1.7s linear infinite;
+}
+
+@keyframes anim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes texte {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-60%, 0);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: translate(0, 0);
+  }
+  70% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100%);
+  }
+}
 /* Bouton validation */
 .btn_valid {
   width: 200px;
@@ -101,6 +215,7 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
+  cursor: pointer;
 }
 .carte_bloc_coeurplein {
   text-align: center;
@@ -109,6 +224,7 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
+  cursor: pointer;
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   color: transparent;
