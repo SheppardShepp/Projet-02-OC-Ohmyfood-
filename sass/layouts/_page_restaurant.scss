@@ -36,35 +36,46 @@
             border-radius: $btnraduis;
             @include shadow;
             @include flex;
-            &:hover{
-                i{
-                    display: flex;
-                    @include btn_hover;
-                    @include flexcenter;
-                }
-            }
-        
-            i{
-                display: none;
-            }
             .article{
-                width: 100%;
-                padding: 5px 20px 5px 10px;
-                h3{
-                    font-size: 16px;
-                    margin: 5px;
-                }
-                &_text{
-                    font-size: 14px;
+                width: 85%;
+                padding: 5px 0 5px 10px;
+                font-size: 14px;
+                margin: 5px;
+                overflow: hidden;
+                white-space: nowrap;
+                @include flexcolonne;
+                p, h3 {
                     margin: 5px;
                     overflow: hidden;
-                    @include flexbetween;
-                    p{
-                        margin: 0;
-                        font-weight: bold;
+                    text-overflow: ellipsis;
+                }
+            }
+            .prix{
+                width: 15%;
+                font-weight: bold;
+                p{
+                    margin: 32px 0 0 0;
+                }
+            }
+            .okmenu{
+                display: inline-block;
+                width: 0px;
+                overflow: hidden;
+                @include btn_hover;
+                @include flexcenter;
+                transition: all 0.4s;
+            }
+            &:hover{
+                .okmenu{
+                    width: 80px;
+                    i{
+                        transform: rotateZ(-360deg);
+                        transition: 0.3s;
                     }
                 }
-            }            
+            }
+
+                       
         }
     }
     .btn_validateur{

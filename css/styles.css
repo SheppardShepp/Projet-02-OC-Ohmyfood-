@@ -154,6 +154,7 @@ body {
   }
   100% {
     transform: translate(0, -100%);
+    opacity: 100%;
   }
 }
 /* Bouton validation */
@@ -446,41 +447,49 @@ footer ul a i {
   display: flex;
   align-items: center;
 }
-.main section article:hover i {
+.main section article .article {
+  width: 85%;
+  padding: 5px 0 5px 10px;
+  font-size: 14px;
+  margin: 5px;
+  overflow: hidden;
+  white-space: nowrap;
   display: flex;
-  width: 80px;
+  flex-direction: column;
+}
+.main section article .article p, .main section article .article h3 {
+  margin: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main section article .prix {
+  width: 15%;
+  font-weight: bold;
+}
+.main section article .prix p {
+  margin: 32px 0 0 0;
+}
+.main section article .okmenu {
+  display: inline-block;
+  width: 0px;
+  overflow: hidden;
   height: 100%;
   background-color: #99e2d0;
   color: #ffffff;
-  font-size: 22px;
+  font-size: 24px;
   border-radius: 0 15px 15px 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.4s;
 }
-.main section article i {
-  display: none;
+.main section article:hover .okmenu {
+  width: 80px;
 }
-.main section article .article {
-  width: 100%;
-  padding: 5px 20px 5px 10px;
-}
-.main section article .article h3 {
-  font-size: 16px;
-  margin: 5px;
-}
-.main section article .article_text {
-  font-size: 14px;
-  margin: 5px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.main section article .article_text p {
-  margin: 0;
-  font-weight: bold;
+.main section article:hover .okmenu i {
+  transform: rotateZ(-360deg);
+  transition: 0.3s;
 }
 .main .btn_validateur {
   display: flex;
