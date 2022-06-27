@@ -48,72 +48,72 @@ body {
   inset: 0;
   z-index: 1;
   height: 100%;
-  animation: loading 4s forwards;
+  animation: loading 4s ease-in forwards;
 }
-.loader_lettre .lettre_1 {
-  top: -10%;
-  right: 0;
-  bottom: 0;
-  left: -90px;
-  animation-delay: 0.2s;
-}
-.loader_lettre .lettre_2 {
-  top: -10%;
-  right: 0;
-  bottom: 0;
-  left: -65px;
-  animation-delay: 0.4s;
-}
-.loader_lettre .lettre_3 {
-  top: -10%;
-  right: 0;
-  bottom: 0;
-  left: -35px;
-  animation-delay: 0.6s;
-}
-.loader_lettre .lettre_4 {
-  top: -10%;
-  right: 0;
-  bottom: 0;
-  left: -6px;
-  animation-delay: 0.8s;
-}
-.loader_lettre .lettre_5 {
-  top: -10%;
-  right: 0;
-  bottom: 0;
-  left: 12px;
-  animation-delay: 1s;
-}
-.loader_lettre .lettre_6 {
-  top: -10%;
-  right: 0;
-  bottom: 0;
-  left: 30px;
-  animation-delay: 1.2s;
-}
-.loader_lettre .lettre_7 {
-  top: -10%;
-  right: 0;
-  bottom: 0;
-  left: 53px;
-  animation-delay: 1.4s;
-}
-.loader_lettre .lettre_8 {
-  top: -10%;
-  right: 0;
-  bottom: 0;
-  left: 76px;
-  animation-delay: 1.6s;
-}
-.loader_lettre h1 {
+.loader h1 {
   position: absolute;
   font-size: 35px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: texte 1.5s ease-in-out;
+  animation: texte 2s forwards;
+}
+.loader_lettre .lettre_1 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: -90px;
+  animation-delay: 1.6s;
+}
+.loader_lettre .lettre_2 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: -65px;
+  animation-delay: 1.4s;
+}
+.loader_lettre .lettre_3 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: -35px;
+  animation-delay: 1.2s;
+}
+.loader_lettre .lettre_4 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: -6px;
+  animation-delay: 1s;
+}
+.loader_lettre .lettre_5 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: 12px;
+  animation-delay: 0.8s;
+}
+.loader_lettre .lettre_6 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: 30px;
+  animation-delay: 0.6s;
+}
+.loader_lettre .lettre_7 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: 53px;
+  animation-delay: 0.4s;
+}
+.loader_lettre .lettre_8 {
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: 76px;
+  animation-delay: 0.2s;
 }
 .loader_cercle {
   position: absolute;
@@ -138,23 +138,19 @@ body {
   }
 }
 @keyframes texte {
-  0% {
-    transform: translate(0);
+  40% {
+    transform: translate(0, 0);
   }
   100% {
-    transform: translate(-60%, 0);
+    transform: translate(110%, 0);
   }
 }
 @keyframes loading {
-  0% {
-    transform: translate(0, 0);
-  }
   70% {
     transform: translate(0, 0);
   }
   100% {
     transform: translate(0, -100%);
-    opacity: 100%;
   }
 }
 /* Bouton validation */
@@ -172,7 +168,8 @@ body {
   transition: transform 0.2s;
 }
 .btn_valid:hover {
-  transform: scale(1.15);
+  opacity: 0.8;
+  box-shadow: 0px 5px 15px 5px #d6d6d6;
 }
 
 /* bouton du filtre */
@@ -412,6 +409,7 @@ footer ul a i {
   background-color: #f5f4f4;
   margin-top: -40px;
   border-radius: 35px 35px 0 0;
+  position: relative;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -436,7 +434,7 @@ footer ul a i {
   align-items: center;
   justify-content: center;
 }
-.main section article {
+.main section .carte {
   width: 95%;
   height: 70px;
   margin: 10px 0 10px 0;
@@ -446,8 +444,9 @@ footer ul a i {
   box-shadow: 0px 5px 15px 2px #d6d6d6;
   display: flex;
   align-items: center;
+  animation: menuanimation 1.5s both;
 }
-.main section article .article {
+.main section .carte .article {
   width: 85%;
   padding: 5px 0 5px 10px;
   font-size: 14px;
@@ -457,19 +456,19 @@ footer ul a i {
   display: flex;
   flex-direction: column;
 }
-.main section article .article p, .main section article .article h3 {
+.main section .carte .article p, .main section .carte .article h3 {
   margin: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main section article .prix {
+.main section .carte .prix {
   width: 15%;
   font-weight: bold;
 }
-.main section article .prix p {
+.main section .carte .prix p {
   margin: 32px 0 0 0;
 }
-.main section article .okmenu {
+.main section .carte .okmenu {
   display: inline-block;
   width: 0px;
   overflow: hidden;
@@ -484,17 +483,40 @@ footer ul a i {
   justify-content: center;
   transition: all 0.4s;
 }
-.main section article:hover .okmenu {
+.main section .carte:hover .okmenu {
   width: 80px;
 }
-.main section article:hover .okmenu i {
+.main section .carte:hover .okmenu i {
   transform: rotateZ(-360deg);
   transition: 0.3s;
+}
+.main section .plat_1 {
+  animation-delay: 0.2s;
+}
+.main section .plat_2 {
+  animation-delay: 0.4s;
+}
+.main section .plat_3 {
+  animation-delay: 0.6s;
+}
+.main section .plat_4 {
+  animation-delay: 0.8s;
 }
 .main .btn_validateur {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@keyframes menuanimation {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -10,7 +10,8 @@
     @include flexcenter;
     transition: transform 0.2s;
     &:hover{
-        transform: scale(1.15);
+        opacity: 0.8;
+        box-shadow: 0px 5px 15px 5px $shadow;
     }
 }
 /* bouton du filtre */
@@ -45,10 +46,10 @@
 /* Bouton favoris */
 .carte_bloc{
     &_coeurvide{
-        @include coeur;
+        @include coeurmenu;
     }
     &_coeurplein{
-        @include coeur;
+        @include coeurmenu;
         background:linear-gradient(0deg, $primaire, $secondaire);
         -webkit-background-clip: text;
         color: transparent;

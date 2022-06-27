@@ -10,19 +10,6 @@
         <title>La note enchantée</title>
     </head>
     <body>
-        <div class="loader">
-            <span class="loader_lettre">
-                <h1 class="lettre_1">O</h1>
-                <h1 class="lettre_2">h</h1>
-                <h1 class="lettre_3">m</h1>
-                <h1 class="lettre_4">y</h1>
-                <h1 class="lettre_5">f</h1>
-                <h1 class="lettre_6">o</h1>
-                <h1 class="lettre_7">o</h1>
-                <h1 class="lettre_8">d</h1>
-            </span>
-            <div class="loader_cercle"></div>
-        </div>
         <header class="header">
                 <a href="../index.html" class="header_arrow"><i class="fa-solid fa-arrow-left"></i></a>
                 <img src="../images/logo/ohmyfood.png" alt="Accueil" class="header_logo">
@@ -31,11 +18,14 @@
             <div class="main_img img_lanote"></div>
             <div class="main_restau">
                 <h1>La note enchantée</h1>
-                <i class="far fa-heart active"></i>
+                <div>
+                    <i class="carte_bloc_coeurvide far fa-heart active"></i>
+                    <i class="carte_bloc_coeurplein fa-solid fa-heart"></i>
+                </div>
             </div>
             <section>
                 <h2>ENTRÉES</h2>
-                <article>
+                <article class="carte plat_1">
                     <div class="article">
                         <h3>Ravioles de foie gras</h3>
                         <p>Accompagnés de leur crème à la truffe</p>
@@ -45,7 +35,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </article>
-                <article>
+                <article class="carte plat_2">
                     <div class="article">
                         <h3>Caviar osciètre</h3>
                         <p>Sur blini à la farine de blé noir</p>
@@ -55,7 +45,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </article>
-                <article>
+                <article class="carte plat_3">
                     <div class="article">
                         <h3>Homard et espuma de potiron</h3>
                         <p>Mariné aux zestes d'orange</p>
@@ -65,7 +55,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </article>
-                <article>
+                <article class="carte plat_4">
                     <div class="article">
                         <h3>Foie gras de canard cuit entier</h3>
                         <p>Confiture de figue et pain toasté</p>
@@ -78,7 +68,7 @@
             </section>
             <section>
                 <h2>PLATS</h2>
-                <article>
+                <article class="carte plat_1">
                     <div class="article">
                         <h3>Noix de coquilles Saint-Jacques</h3>
                         <p>Sur lit de purée de céleri-rave</p>
@@ -88,7 +78,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </article>
-                <article>
+                <article class="carte plat_2">
                     <div class="article">
                         <h3>Langoustine poêlée</h3>
                         <p>Purée de patate douce</p>
@@ -98,7 +88,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </article>
-                <article>
+                <article class="carte plat_3">
                     <div class="article">
                         <h3>Mijoté de queue de boeuf</h3>
                         <p>Et riz sauvage aux zestes de citron</p>
@@ -111,7 +101,7 @@
             </section>
             <section>
                 <h2>DESSERTS</h2>
-                <article>
+                <article class="carte plat_1">
                     <div class="article">
                         <h3>Macaron noisette et chocolat</h3>
                         <p>Glace au caramel brun et sel de Guérande</p>
@@ -121,7 +111,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </article>
-                <article>
+                <article class="carte plat_2">
                     <div class="article">
                         <h3>Baba au rhum revisité</h3>
                         <p>Avec son coulis de citron</p>
@@ -131,7 +121,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </article>
-                <article>
+                <article class="carte plat_3">
                     <div class="article">
                         <h3>Tarte au citron meringuée</h3>
                         <p>Déstructurée</p>

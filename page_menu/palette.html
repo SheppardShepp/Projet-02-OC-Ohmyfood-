@@ -10,19 +10,6 @@
         <title>La palette du goût</title>
     </head>
     <body>
-        <div class="loader">
-            <span class="loader_lettre">
-                <h1 class="lettre_1">O</h1>
-                <h1 class="lettre_2">h</h1>
-                <h1 class="lettre_3">m</h1>
-                <h1 class="lettre_4">y</h1>
-                <h1 class="lettre_5">f</h1>
-                <h1 class="lettre_6">o</h1>
-                <h1 class="lettre_7">o</h1>
-                <h1 class="lettre_8">d</h1>
-            </span>
-            <div class="loader_cercle"></div>
-        </div>
         <header class="header">
                 <a href="../index.html" class="header_arrow"><i class="fa-solid fa-arrow-left"></i></a>
                 <img src="../images/logo/ohmyfood.png" alt="Accueil" class="header_logo">
@@ -31,11 +18,14 @@
             <div class="main_img img_palette"></div>
             <div class="main_restau">
                 <h1>La palette du goût</h1>
-                <i class="far fa-heart active"></i>
+                <div>
+                    <i class="carte_bloc_coeurvide far fa-heart active"></i>
+                    <i class="carte_bloc_coeurplein fa-solid fa-heart"></i>
+                </div>
             </div>
             <section>
                 <h2>ENTRÉES</h2>
-                <article>
+                <article class="carte plat_1">
                     <div class="article">
                         <h3>Fricassée d'escargot</h3>
                         <p> Au pimet d'espelette</p>
@@ -45,32 +35,29 @@
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </article>
-                <article>
+                <article class="carte plat_2">
                     <div class="article">
                         <h3>Foie gras de canard mi-cuit</h3>
                         <p>Et ses copeaux de truffe noire</p> 
                     </div>
                     <div class="prix"><p>35€</p></div>
                     <div class="okmenu">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
+                        <i class="fa-solid fa-circle-check"></i>                        </div>
                 </article>
-                <article>
+                <article class="carte plat_3">
                     <div class="article">
-                        <h3>Oeuf au plat</h3>
-                        <p>Assaisonné à la truffe sur lit de caviar</p>
+                    <h3>Oeuf au plat</h3>
+                    <p>Assaisonné à la truffe sur lit de caviar</p>
                     </div>
                     <div class="prix"><p>20€</p></div>
                     <div class="okmenu">
-                        <i class="fa-solid fa-circle-check"></i>
+                       <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </article>
             </section>
             <section>
                 <h2>PLATS</h2>
-
-
-                <article>
+                <article class="carte plat_1">
                     <div class="article">
                         <h3>Filet de boeuf aux herbes</h3>
                         <p>Accompagné de sa ribambelle de légumes</p>
@@ -80,7 +67,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </article>
-                <article>
+                <article class="carte plat_2">
                     <div class="article">
                         <h3>Parmentier de queue de boeuf</h3>
                         <p>À la truffe noire sur sa purée de panais</p>
@@ -90,7 +77,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </article>
-                <article>
+                <article class="carte plat_3">
                     <div class="article">
                         <h3>Filet de turbot</h3>
                         <p>Aux agrumes</p>
@@ -103,7 +90,7 @@
             </section>
             <section>
                 <h2>DESSERTS</h2>
-                <article>
+                <article class="carte plat_1">
                     <div class="article">
                         <h3>Paris-Brest</h3>
                         <p>Revisité</p>
@@ -113,7 +100,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </article>
-                <article>
+                <article class="carte plat_2">
                     <div class="article">
                         <h3>Macaron au chocolat d'exception</h3>
                         <p>Et glace à la vanille de Madagascar</p>
@@ -123,7 +110,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                 </article>
-                <article>
+                <article class="carte plat_3">
                     <div class="article">
                         <h3>Mousse au chocolat</h3>
                         <p>Au piment d'Espelette et à la truffe noire</p>

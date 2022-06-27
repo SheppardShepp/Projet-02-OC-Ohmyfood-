@@ -4,52 +4,48 @@
     inset: 0;
     z-index: 1;
     height: 100%;
-    animation: loading 4s forwards;
-
-
+    animation: loading 4s ease-in forwards;
+    h1{
+        position: absolute;
+        font-size: 35px;
+        width: 100%;
+        @include flexcenter;
+        animation: texte 2s forwards;
+    }
     &_lettre{
         .lettre_1{
             top: -10%; right: 0; bottom: 0; left: -90px;
-            animation-delay: 0.2s;
+            animation-delay: 1.6s;
         }
         .lettre_2{
             top: -10%; right: 0; bottom: 0; left: -65px;
-            animation-delay: 0.4s;
+            animation-delay: 1.4s;
         }
         .lettre_3{
             top: -10%; right: 0; bottom: 0; left: -35px;
-            animation-delay: 0.6s;
+            animation-delay: 1.2s;
         }
         .lettre_4{
             top: -10%; right: 0; bottom: 0; left: -6px;
-            animation-delay: 0.8s;
+            animation-delay: 1s;
         }
         .lettre_5{
             top: -10%; right: 0; bottom: 0; left:12px;
-            animation-delay: 1s;
+            animation-delay: 0.8s;
         }
         .lettre_6{
             top: -10%; right: 0; bottom: 0; left: 30px;
-            animation-delay: 1.2s;
+            animation-delay: 0.6s;
         }
         .lettre_7{
             top: -10%; right: 0; bottom: 0; left: 53px;
-            animation-delay: 1.4s;
+            animation-delay: 0.4s;
         }
         .lettre_8{
             top: -10%; right: 0; bottom: 0; left: 76px;
-            animation-delay: 1.6s;
-        }
-        h1{
-            position: absolute;
-            font-size: 35px;
-            width: 100%;
-            @include flexcenter;
-            animation: texte 1.5s ease-in-out;
+            animation-delay: 0.2s;
         }
     }
-
-
     &_cercle{
         position: absolute;
         border-top: 7px solid $primaire;
@@ -65,30 +61,24 @@
     }
     
 }
-
 @keyframes anim{
     100%{
         transform: rotate(360deg);
     }
 }
-
 @keyframes texte {
-    0%{
-        transform: translate(0, );
+    40%{
+        transform: translate(0,0);
     }
-    100%{
-        transform: translate(-60%, 0);
-    }
+	100% {
+		transform: translate(110%,0);
+	}
 }
 @keyframes loading{
-    0%{
-        transform: translate(0, 0);
-    }
     70%{
         transform: translate(0, 0);
     }
     100%{
         transform: translate(0, -100%);
-        opacity: 100%;
     }
 }
