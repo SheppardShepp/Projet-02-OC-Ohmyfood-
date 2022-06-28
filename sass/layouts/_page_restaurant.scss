@@ -1,8 +1,15 @@
 .main{
     background-color: $fondgris;
-    height: 1500px;
     h2{
-        font-size: 17px;
+        font-size: 18px;
+        &::after {
+            content: ".";
+            display: block;
+            border-bottom: 4px solid $tertiare;
+            width: 45px;
+            margin-top: 5px;
+            font-size: 0px;
+        }
     }
     &_img{
         height: 250px;
@@ -16,68 +23,74 @@
         position: relative;
         @include padding_bloc;
         @include flexbetween;
-        @include flexcenter;
         i{
             font-size: 26px;
             width: 40px;
             @include flexcenter;
         }
     }
+
+    
     section{
-        height: 350px;
+        margin-bottom: 1%;
         background-color: $fondgris;
-        @include flexcolonne;
-        @include flexcenter;
-        .carte{
-            width: 95%;
-            height: 70px;
-            margin: 10px 0 10px 0;
-            cursor: pointer;
-            background-color: $fondtext;
-            border-radius: $btnraduis;
-            @include shadow;
-            @include flex;
-            animation: menuanimation 1.5s both;
-            
-            .article{
-                width: 85%;
-                padding: 5px 0 5px 10px;
-                font-size: 14px;
-                margin: 5px;
-                overflow: hidden;
-                white-space: nowrap;
-                @include flexcolonne;
-                p, h3 {
+        @include padding_bloc;
+        .bloc{
+            @include flexcenter;
+            @include flexcolonne;
+            &_carte{
+                width: 100%;
+                max-width: 480px;
+                height: 70px;
+                margin: 10px 0 10px 0;
+                cursor: pointer;
+                background-color: $fondtext;
+                border-radius: $btnraduis;
+                @include shadow;
+                @include flex;
+                @include flexbetween;
+                animation: menuanimation 1.5s both;
+                .article{
+                    width: 85%;
+                    padding: 5px 0 5px 10px;
+                    font-size: 14px;
                     margin: 5px;
                     overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-            }
-            .prix{
-                width: 15%;
-                font-weight: bold;
-                p{
-                    margin: 32px 0 0 0;
-                }
-            }
-            .okmenu{
-                display: inline-block;
-                width: 0px;
-                overflow: hidden;
-                @include btn_hover;
-                @include flexcenter;
-                transition: all 0.4s;
-            }
-            &:hover{
-                .okmenu{
-                    width: 80px;
-                    i{
-                        transform: rotateZ(-360deg);
-                        transition: 0.3s;
+                    white-space: nowrap;
+                    @include flexcolonne;
+                    p{
+                        font-size: 16px;
+                        @include texteplat;
                     }
                 }
-            }             
+                .prix{
+                    width: 15%;
+                    font-weight: bold;
+                    p{
+                        text-align: right;
+                        margin: 32px 15px 0 0;
+                    }
+                }
+                .okmenu{
+                    display: inline-block;
+                    width: 0px;
+                    overflow: hidden;
+                    @include btn_hover;
+                    @include flexcenter;
+                    transition: all 0.4s;
+                }
+                &:hover{
+                    .okmenu{
+                        width: 80px;
+                        i{
+                            transform: rotateZ(-360deg);
+                            transition: 0.3s;
+                        }
+                    }
+                }             
+            }
         }
+        
         .plat_1{
             animation-delay: 0.2s;
         }

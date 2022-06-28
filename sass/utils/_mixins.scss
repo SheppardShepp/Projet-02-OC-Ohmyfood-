@@ -9,6 +9,11 @@
 @mixin padding_bloc {
     padding: 20px;
 }
+@mixin texteplat {
+    margin: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 @mixin shadow {
     box-shadow: 0px 5px 15px 2px $shadow;
 }
@@ -17,13 +22,29 @@
     background-size: cover;
     width: auto;
 }
-@mixin coeurmenu {
+@mixin coeur {
     text-align: center;
+    position: absolute;
+    right: 20px;
     font-size: 27px;
     width: 40px;
-    position: absolute;
-    top: 20px; right: 20px;
     cursor: pointer;
+}
+@mixin coeurplein {
+    text-align: center;
+    position: absolute;
+    right: 20px;
+    font-size: 27px;
+    width: 40px;
+    cursor: pointer;
+    background:linear-gradient(0deg, $primaire, $secondaire);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transition: opacity 0.5s;
+    &:hover{
+        opacity: 1;
+    }
 }
 @mixin flex {
     display: flex;

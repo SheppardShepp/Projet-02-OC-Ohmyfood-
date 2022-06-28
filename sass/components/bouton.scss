@@ -14,15 +14,22 @@
         box-shadow: 0px 5px 15px 5px $shadow;
     }
 }
+
+
 /* bouton du filtre */
 .btn{
     width: 90%;
+    min-width: 280px;
+    max-width: 350px;
     height: 70px;
     background-color: $fondgris;
     border-radius: $btnraduis;
     margin: 15px 0 15px 0;
     @include shadow;
     @include flex;
+    @media (min-width: 1024px){
+        margin: 15px 20px 15px 20px;
+    }
     &:hover{
         background-color: $primaire-opaque;
         i{
@@ -43,20 +50,27 @@
         opacity: 0.8;
     }
 }
-/* Bouton favoris */
+
+
+/* Bouton favoris accueil */
 .carte_bloc{
     &_coeurvide{
-        @include coeurmenu;
+        @include coeur;
+        top: 20px;
     }
     &_coeurplein{
-        @include coeurmenu;
-        background:linear-gradient(0deg, $primaire, $secondaire);
-        -webkit-background-clip: text;
-        color: transparent;
-        opacity: 0;
-        transition: opacity 0.5s;
-        &:hover{
-            opacity: 1;
-        }
+        @include coeurplein;
+        top: 20px;
     }
 }
+
+
+/* Bouton favoris menu */
+    .coeurmenuvide{
+        @include coeur;
+        top: 40px;
+    }
+    .coeurmenuplein{
+        @include coeurplein;
+        top: 40px;
+    }

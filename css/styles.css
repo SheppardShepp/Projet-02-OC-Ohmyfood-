@@ -14,7 +14,9 @@ html h1 {
 }
 html h3 {
   font-size: 18px;
-  margin: 5px 0 5px 0;
+  margin: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 html a {
   text-decoration: none;
@@ -175,6 +177,8 @@ body {
 /* bouton du filtre */
 .btn {
   width: 90%;
+  min-width: 280px;
+  max-width: 350px;
   height: 70px;
   background-color: #f5f4f4;
   border-radius: 20px;
@@ -182,6 +186,11 @@ body {
   box-shadow: 0px 5px 15px 2px #d6d6d6;
   display: flex;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .btn {
+    margin: 15px 20px 15px 20px;
+  }
 }
 .btn:hover {
   background-color: rgba(147, 86, 220, 0.2);
@@ -205,31 +214,60 @@ body {
   opacity: 0.8;
 }
 
-/* Bouton favoris */
+/* Bouton favoris accueil */
 .carte_bloc_coeurvide {
   text-align: center;
+  position: absolute;
+  right: 20px;
   font-size: 27px;
   width: 40px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
   cursor: pointer;
+  top: 20px;
 }
 .carte_bloc_coeurplein {
   text-align: center;
+  position: absolute;
+  right: 20px;
   font-size: 27px;
   width: 40px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
   cursor: pointer;
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
   transition: opacity 0.5s;
+  top: 20px;
 }
 .carte_bloc_coeurplein:hover {
+  opacity: 1;
+}
+
+/* Bouton favoris menu */
+.coeurmenuvide {
+  text-align: center;
+  position: absolute;
+  right: 20px;
+  font-size: 27px;
+  width: 40px;
+  cursor: pointer;
+  top: 40px;
+}
+
+.coeurmenuplein {
+  text-align: center;
+  position: absolute;
+  right: 20px;
+  font-size: 27px;
+  width: 40px;
+  cursor: pointer;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: opacity 0.5s;
+  top: 40px;
+}
+.coeurmenuplein:hover {
   opacity: 1;
 }
 
@@ -292,15 +330,19 @@ header .header_logo {
 
 /* Section fonctionnement */
 .fonctionnement {
-  height: 420px;
+  margin-bottom: 30px;
   padding: 20px;
 }
 .fonctionnement_menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
-  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .fonctionnement_menu {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .fonctionnement_menu span {
   font-weight: bold;
@@ -312,15 +354,34 @@ header .header_logo {
   padding: 20px;
   /* cartes restaurant de la page de garde */
 }
-.carte_restaurant .carte {
+.carte_restaurant div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .carte_restaurant div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.carte_restaurant div .carte {
   border-radius: 15px;
   background-color: #ffffff;
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 450px;
+  margin: 10px;
   box-shadow: 0px 5px 15px 2px #d6d6d6;
   position: relative;
   /* bloc texte des cartes de la page de garde */
 }
-.carte_restaurant .carte_img {
+@media (min-width: 1024px) {
+  .carte_restaurant div .carte {
+    max-width: 750px;
+  }
+}
+.carte_restaurant div .carte_img {
   position: relative;
   height: 175px;
   border-radius: 15px 15px 0 0;
@@ -328,7 +389,7 @@ header .header_logo {
   background-size: cover;
   width: auto;
 }
-.carte_restaurant .carte_img span {
+.carte_restaurant div .carte_img span {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -341,25 +402,23 @@ header .header_logo {
   align-items: center;
   justify-content: center;
 }
-.carte_restaurant .carte_bloc {
+.carte_restaurant div .carte_bloc {
   min-width: 160px;
   height: 80px;
-  display: flex;
-  align-items: center;
   position: relative;
 }
-.carte_restaurant .carte_bloc a {
+.carte_restaurant div .carte_bloc a {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
 }
-.carte_restaurant .carte_bloc_text {
-  margin-left: 15px;
+.carte_restaurant div .carte_bloc_text {
+  align-items: flex-start;
+  margin: 10px;
+  flex-direction: column;
 }
-.carte_restaurant .carte_bloc_text p {
+.carte_restaurant div .carte_bloc_text p {
   font-size: 18px;
-  margin: 5px 0 5px 0;
+  margin: 5px;
 }
 
 /* footer */
@@ -393,10 +452,17 @@ footer ul a i {
 
 .main {
   background-color: #f5f4f4;
-  height: 1500px;
 }
 .main h2 {
-  font-size: 17px;
+  font-size: 18px;
+}
+.main h2::after {
+  content: ".";
+  display: block;
+  border-bottom: 4px solid #99e2d0;
+  width: 45px;
+  margin-top: 5px;
+  font-size: 0px;
 }
 .main_img {
   height: 250px;
@@ -414,9 +480,6 @@ footer ul a i {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .main_restau i {
   font-size: 26px;
@@ -426,16 +489,20 @@ footer ul a i {
   justify-content: center;
 }
 .main section {
-  height: 350px;
+  margin-bottom: 1%;
   background-color: #f5f4f4;
-  display: flex;
-  flex-direction: column;
+  padding: 20px;
+}
+.main section .bloc {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
-.main section .carte {
-  width: 95%;
+.main section .bloc_carte {
+  width: 100%;
+  max-width: 480px;
   height: 70px;
   margin: 10px 0 10px 0;
   cursor: pointer;
@@ -444,9 +511,12 @@ footer ul a i {
   box-shadow: 0px 5px 15px 2px #d6d6d6;
   display: flex;
   align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   animation: menuanimation 1.5s both;
 }
-.main section .carte .article {
+.main section .bloc_carte .article {
   width: 85%;
   padding: 5px 0 5px 10px;
   font-size: 14px;
@@ -456,19 +526,21 @@ footer ul a i {
   display: flex;
   flex-direction: column;
 }
-.main section .carte .article p, .main section .carte .article h3 {
+.main section .bloc_carte .article p {
+  font-size: 16px;
   margin: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main section .carte .prix {
+.main section .bloc_carte .prix {
   width: 15%;
   font-weight: bold;
 }
-.main section .carte .prix p {
-  margin: 32px 0 0 0;
+.main section .bloc_carte .prix p {
+  text-align: right;
+  margin: 32px 15px 0 0;
 }
-.main section .carte .okmenu {
+.main section .bloc_carte .okmenu {
   display: inline-block;
   width: 0px;
   overflow: hidden;
@@ -483,10 +555,10 @@ footer ul a i {
   justify-content: center;
   transition: all 0.4s;
 }
-.main section .carte:hover .okmenu {
+.main section .bloc_carte:hover .okmenu {
   width: 80px;
 }
-.main section .carte:hover .okmenu i {
+.main section .bloc_carte:hover .okmenu i {
   transform: rotateZ(-360deg);
   transition: 0.3s;
 }
