@@ -50,7 +50,7 @@ body {
   inset: 0;
   z-index: 1;
   height: 100%;
-  animation: loading 4s ease-in forwards;
+  animation: loading 2.7s ease-in forwards;
 }
 .loader h1 {
   position: absolute;
@@ -59,7 +59,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: texte 2s forwards;
+  animation: texte 1s forwards;
 }
 .loader_lettre .lettre_1 {
   top: -10%;
@@ -140,7 +140,7 @@ body {
   }
 }
 @keyframes texte {
-  40% {
+  20% {
     transform: translate(0, 0);
   }
   100% {
@@ -308,7 +308,7 @@ header .header_logo {
 }
 .localisation .explorer {
   text-align: center;
-  height: 250px;
+  height: auto;
   background-color: #f5f4f4;
   display: flex;
   align-items: center;
@@ -349,39 +349,33 @@ header .header_logo {
 }
 
 /* Section restaurant page de garde */
-.carte_restaurant {
+.section_restaurant {
   background-color: #f5f4f4;
   padding: 20px;
-  /* cartes restaurant de la page de garde */
 }
-.carte_restaurant div {
-  width: 100%;
+.section_restaurant_article {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
 }
-@media (max-width: 1024px) {
-  .carte_restaurant div {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.carte_restaurant div .carte {
+.section_restaurant_article .carte {
+  box-shadow: 0px 5px 15px 2px #d6d6d6;
   border-radius: 15px;
   background-color: #ffffff;
   width: 100%;
-  max-width: 450px;
+  min-width: 300px;
+  max-width: 500px;
   margin: 10px;
-  box-shadow: 0px 5px 15px 2px #d6d6d6;
-  position: relative;
   /* bloc texte des cartes de la page de garde */
 }
-@media (min-width: 1024px) {
-  .carte_restaurant div .carte {
-    max-width: 750px;
+@media (min-width: 1680px) {
+  .section_restaurant_article .carte {
+    width: 400px;
   }
 }
-.carte_restaurant div .carte_img {
+.section_restaurant_article .carte_img {
   position: relative;
   height: 175px;
   border-radius: 15px 15px 0 0;
@@ -389,7 +383,10 @@ header .header_logo {
   background-size: cover;
   width: auto;
 }
-.carte_restaurant div .carte_img span {
+.section_restaurant_article .carte_img span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 20px;
   right: 20px;
@@ -398,25 +395,22 @@ header .header_logo {
   background-color: #99e2d0;
   color: #2c9c81;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.carte_restaurant div .carte_bloc {
+.section_restaurant_article .carte_bloc {
   min-width: 160px;
   height: 80px;
   position: relative;
 }
-.carte_restaurant div .carte_bloc a {
+.section_restaurant_article .carte_bloc a {
   width: 100%;
   height: 100%;
 }
-.carte_restaurant div .carte_bloc_text {
+.section_restaurant_article .carte_bloc_text {
   align-items: flex-start;
   margin: 10px;
   flex-direction: column;
 }
-.carte_restaurant div .carte_bloc_text p {
+.section_restaurant_article .carte_bloc_text p {
   font-size: 18px;
   margin: 5px;
 }
@@ -488,21 +482,35 @@ footer ul a i {
   align-items: center;
   justify-content: center;
 }
-.main section {
+.main .section {
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .main .section {
+    display: flex;
+  }
+}
+.main .section_bloc {
   margin-bottom: 1%;
   background-color: #f5f4f4;
   padding: 20px;
 }
-.main section .bloc {
+@media (min-width: 1024px) {
+  .main .section_bloc {
+    width: 30%;
+    flex-direction: row;
+  }
+}
+.main .section_bloc .carte {
   display: flex;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
 }
-.main section .bloc_carte {
+.main .section_bloc .carte_plat {
   width: 100%;
-  max-width: 480px;
+  max-width: 680px;
   height: 70px;
   margin: 10px 0 10px 0;
   cursor: pointer;
@@ -516,7 +524,7 @@ footer ul a i {
   justify-content: space-between;
   animation: menuanimation 1.5s both;
 }
-.main section .bloc_carte .article {
+.main .section_bloc .carte_plat_texte {
   width: 85%;
   padding: 5px 0 5px 10px;
   font-size: 14px;
@@ -526,21 +534,21 @@ footer ul a i {
   display: flex;
   flex-direction: column;
 }
-.main section .bloc_carte .article p {
+.main .section_bloc .carte_plat_texte p {
   font-size: 16px;
   margin: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main section .bloc_carte .prix {
+.main .section_bloc .carte_plat_prix {
   width: 15%;
   font-weight: bold;
 }
-.main section .bloc_carte .prix p {
+.main .section_bloc .carte_plat_prix p {
   text-align: right;
   margin: 32px 15px 0 0;
 }
-.main section .bloc_carte .okmenu {
+.main .section_bloc .carte_plat_okmenu {
   display: inline-block;
   width: 0px;
   overflow: hidden;
@@ -555,23 +563,23 @@ footer ul a i {
   justify-content: center;
   transition: all 0.4s;
 }
-.main section .bloc_carte:hover .okmenu {
+.main .section_bloc .carte_plat:hover .carte_plat_okmenu {
   width: 80px;
 }
-.main section .bloc_carte:hover .okmenu i {
+.main .section_bloc .carte_plat:hover .carte_plat_okmenu i {
   transform: rotateZ(-360deg);
   transition: 0.3s;
 }
-.main section .plat_1 {
+.main .section_bloc .plat_1 {
   animation-delay: 0.2s;
 }
-.main section .plat_2 {
+.main .section_bloc .plat_2 {
   animation-delay: 0.4s;
 }
-.main section .plat_3 {
+.main .section_bloc .plat_3 {
   animation-delay: 0.6s;
 }
-.main section .plat_4 {
+.main .section_bloc .plat_4 {
   animation-delay: 0.8s;
 }
 .main .btn_validateur {

@@ -4,13 +4,13 @@
     inset: 0;
     z-index: 1;
     height: 100%;
-    animation: loading 4s ease-in forwards;
+    animation: loading 2.7s ease-in forwards;
     h1{
         position: absolute;
         font-size: 35px;
         width: 100%;
         @include flexcenter;
-        animation: texte 2s forwards;
+        animation: texte 1s forwards;
     }
     &_lettre{
         .lettre_1{
@@ -67,7 +67,7 @@
     }
 }
 @keyframes texte {
-    40%{
+    20%{
         transform: translate(0,0);
     }
 	100% {

@@ -13,36 +13,44 @@
     }  
 }
 /* Section restaurant page de garde */
-.carte_restaurant{
+.section_restaurant{
     background-color: $fondgris;
     @include padding_bloc;
 
-    /* cartes restaurant de la page de garde */
-    div{
+
+    &_article{
+        @include flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @media (max-width: 1024px){
-            @include flexcolonne;
-        }
+
+
+
+
+
+
+
+
         .carte{
+            @include shadow;
             border-radius: 15px;
             background-color: $fondtext;
             width: 100%;
-            max-width: 450px;
+            min-width: 300px;
+            max-width: 500px;
             margin: 10px;
-            @include shadow;
-            position: relative;
-            @media (min-width: 1024px){
-                max-width: 750px;
+            @media (min-width: 1680px){
+                width: 400px;
             }
+
+
             &_img{
                 position: relative;
                 height: 175px;
                 border-radius: 15px 15px 0 0;
                 @include block_img;
                 span{
+                    @include flexcenter;
                     position: absolute;
                     top: 20px; right: 20px;
                     width: 80px;
@@ -50,7 +58,6 @@
                     background-color: $tertiare;
                     color: $colornews;
                     font-weight: bold;
-                    @include flexcenter;
                 }
             }
     
