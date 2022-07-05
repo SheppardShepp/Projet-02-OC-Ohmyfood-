@@ -58,6 +58,7 @@
                     height: 70px;
                     margin: 10px 0 10px 0;
                     cursor: pointer;
+                    overflow: hidden;
                     background-color: $fondtext;
                     border-radius: $btnraduis;
                     @include shadow;
@@ -80,7 +81,6 @@
                     &_prix{
                         width: 15%;
                         font-weight: bold;
-    
                         p{
                             text-align: right;
                             margin: 32px 15px 0 0;
