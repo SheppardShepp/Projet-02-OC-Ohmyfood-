@@ -475,6 +475,11 @@ footer ul a i {
   align-items: center;
   justify-content: space-between;
 }
+@media (min-width: 599px) {
+  .main_restau {
+    justify-content: center;
+  }
+}
 .main_restau i {
   font-size: 26px;
   width: 40px;
