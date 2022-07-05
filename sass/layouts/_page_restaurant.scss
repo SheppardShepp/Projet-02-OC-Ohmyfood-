@@ -1,5 +1,8 @@
 .main{
     background-color: $fondgris;
+    h1{
+        margin-right: 50px;
+    }
     h2{
         font-size: 18px;
         &::after {
