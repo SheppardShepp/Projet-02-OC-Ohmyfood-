@@ -50,21 +50,27 @@
 }
 /* Bouton favoris accueil */
 .carte_bloc{
-    &_coeurvide{
-        @include coeur;
+    &_absolut{
+        position: absolute;
         top: 20px;
+        right: 20px;
+        .far{
+            position: relative;
+            @include coeur;
+            .fa-solid{
+                position: absolute;
+                @include coeurplein;
+            }
+        }
     }
-    &_coeurplein{
-        @include coeurplein;
-        top: 20px;
-    }
+    
 }
 /* Bouton favoris menu */
-    .coeurmenuvide{
+    .far{
+        position: relative;
         @include coeur;
-        top: 40px;
-    }
-    .coeurmenuplein{
-        @include coeurplein;
-        top: 40px;
+        .fa-solid{
+            position: absolute;
+            @include coeurplein;
+        }
     }
