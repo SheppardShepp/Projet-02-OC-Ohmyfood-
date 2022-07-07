@@ -29,15 +29,7 @@
     cursor: pointer;
     transition: all 1s;
     z-index: 0;
-    &:hover{
-        background:linear-gradient(0deg, $primaire, $secondaire);
-        -webkit-background-clip: text;
-        color: transparent;
-        .fa-solid{
-            width: 27px;
-            height: 27px;
-        }
-    }
+    
 }
 @mixin coeurplein {
     @include flexcenter;

@@ -48,29 +48,22 @@
         opacity: 0.8;
     }
 }
-/* Bouton favoris accueil */
-.carte_bloc{
-    &_absolut{
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        .far{
-            position: relative;
-            @include coeur;
-            .fa-solid{
-                position: absolute;
-                @include coeurplein;
-            }
-        }
-    }
-    
-}
+
 /* Bouton favoris menu */
-    .far{
-        position: relative;
-        @include coeur;
-        .fa-solid{
-            position: absolute;
-            @include coeurplein;
-        }
+.far{
+    position: relative;
+    @include coeur;
+    .fa-solid{
+        position: absolute;
+        @include coeurplein;
     }
+    &:hover{
+        background:linear-gradient(0deg, $primaire, $secondaire);
+        -webkit-background-clip: text;
+         color: transparent;
+         .fa-solid{
+            width: 27px;
+            height: 27px;
+         }
+    }
+}
