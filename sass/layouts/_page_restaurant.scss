@@ -5,6 +5,7 @@
     }
     h2{
         font-size: 18px;
+        
         &::after {
             content: ".";
             display: block;
@@ -26,26 +27,32 @@
         position: relative;
         @include padding_bloc;
         @include flexbetween;
+
         @media (min-width: 599px){
             justify-content: center;
         }
     }
     .section{
         justify-content: center;
+
         @media (min-width: 1024px){
             display: flex;
         }
+
         &_bloc{
             margin-bottom: 1%;
             background-color: $fondgris;
             @include padding_bloc;
+
             @media (min-width: 1024px){
                 width: 30%;
                 flex-direction: row;
-            }    
+            }  
+
             .carte{
                 @include flexcenter;
-                @include flexcolonne;    
+                @include flexcolonne; 
+
                 &_plat{
                     width: 100%;
                     max-width: 680px;
@@ -58,7 +65,8 @@
                     @include shadow;
                     @include flex;
                     @include flexbetween;
-                    animation: menuanimation 1.5s both;    
+                    animation: menuanimation 1.5s both;
+
                     &_texte{
                         width: 85%;
                         padding: 5px 0 5px 10px;
@@ -66,20 +74,24 @@
                         margin: 5px;
                         overflow: hidden;
                         white-space: nowrap;
-                        @include flexcolonne;    
+                        @include flexcolonne; 
+
                         p{
                             font-size: 16px;
                             @include texteplat;
                         }
                     }
+
                     &_prix{
                         width: 15%;
                         font-weight: bold;
+
                         p{
                             text-align: right;
                             margin: 32px 15px 0 0;
                         }
                     }
+
                     &_okmenu{
                         display: inline-block;
                         width: 0px;
@@ -88,9 +100,12 @@
                         @include flexcenter;
                         transition: all 0.4s;
                     }
+
                     &:hover{
+
                         .carte_plat_okmenu{
                             width: 80px;
+
                             i{
                                 transform: rotateZ(-360deg);
                                 transition: 0.3s;

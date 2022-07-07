@@ -59,6 +59,7 @@
     }
     &:hover{
         background:linear-gradient(0deg, $primaire, $secondaire);
+        background-clip: text;
         -webkit-background-clip: text;
          color: transparent;
          .fa-solid{

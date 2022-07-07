@@ -214,48 +214,6 @@ body {
   opacity: 0.8;
 }
 
-/* Bouton favoris accueil */
-.carte_bloc_absolut {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-.carte_bloc_absolut .far {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 27px;
-  width: 27px;
-  cursor: pointer;
-  transition: all 1s;
-  z-index: 0;
-}
-.carte_bloc_absolut .far:hover {
-  background: linear-gradient(0deg, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.carte_bloc_absolut .far:hover .fa-solid {
-  width: 27px;
-  height: 27px;
-}
-.carte_bloc_absolut .far .fa-solid {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 27px;
-  width: 27px;
-  height: 0px;
-  cursor: pointer;
-  background: linear-gradient(0deg, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: all 0.5s;
-  z-index: 1;
-}
-
 /* Bouton favoris menu */
 .far {
   position: relative;
@@ -267,15 +225,6 @@ body {
   cursor: pointer;
   transition: all 1s;
   z-index: 0;
-}
-.far:hover {
-  background: linear-gradient(0deg, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.far:hover .fa-solid {
-  width: 27px;
-  height: 27px;
 }
 .far .fa-solid {
   position: absolute;
@@ -291,6 +240,16 @@ body {
   color: transparent;
   transition: all 0.5s;
   z-index: 1;
+}
+.far:hover {
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.far:hover .fa-solid {
+  width: 27px;
+  height: 27px;
 }
 
 /* header */
@@ -430,6 +389,11 @@ header .header_logo {
 .section_restaurant_article .carte_bloc_text p {
   font-size: 18px;
   margin: 5px;
+}
+.section_restaurant_article .carte_bloc_absolut {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 /* footer */
