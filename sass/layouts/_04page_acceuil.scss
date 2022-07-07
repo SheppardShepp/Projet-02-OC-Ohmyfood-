@@ -21,17 +21,21 @@
         justify-content: space-around;
         flex-wrap: wrap;
         width: 100%;
+
         .carte{
             @include shadow;
             border-radius: 15px;
             background-color: $fondtext;
             width: 100%;
-            min-width: 300px;
-            max-width: 500px;
+            max-width: 550px;
             margin: 10px;
-            @media (min-width: 1680px){
-                width: 400px;
+            @media screen and (min-width: 1024px){ 
+                max-width: 45%;
             }
+            @media screen and (min-width: 2130px){
+                max-width: 20%;
+            }
+
             &_img{
                 position: relative;
                 height: 175px;

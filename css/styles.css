@@ -187,7 +187,7 @@ body {
   display: flex;
   align-items: center;
 }
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .btn {
     margin: 15px 20px 15px 20px;
   }
@@ -346,14 +346,18 @@ header .header_logo {
   border-radius: 15px;
   background-color: #ffffff;
   width: 100%;
-  min-width: 300px;
-  max-width: 500px;
+  max-width: 550px;
   margin: 10px;
   /* bloc texte des cartes de la page de garde */
 }
-@media (min-width: 1680px) {
+@media screen and (min-width: 1024px) {
   .section_restaurant_article .carte {
-    width: 400px;
+    max-width: 45%;
+  }
+}
+@media screen and (min-width: 2130px) {
+  .section_restaurant_article .carte {
+    max-width: 20%;
   }
 }
 .section_restaurant_article .carte_img {
