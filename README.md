@@ -14,7 +14,7 @@ Dans le cadre de la formation, l'étape suivante à l'utilisation du langage HTM
 
 ---
 
-## Scénaro du projet
+## :movie_camera: Scénaro du projet
 
 Je vien d’être recruté chez Ohmyfood, en tant que développeur junior.
 
@@ -36,7 +36,7 @@ L'objectif est de développer un site 100% mobile qui répertorie les menus de r
 
 Objectif : Dynamisez une page web avec des animations CSS.
 
-Utilisation : <img height="30" src="https://img2.freepng.fr/20180503/cee/kisspng-web-development-html-css3-the-ohana-code-logo-2cpaper-projection-shaded_1660937-html-dropdown-js-5aebd5631cd291.7591600015254050271181.jpg"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/2560px-Sass_Logo_Color.svg.png"> Sass
+Utilisation : <img height="30" src="https://i.goopics.net/c6u4ky.png"> <img height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/2560px-Sass_Logo_Color.svg.png">
 
 Aperçu :
 
