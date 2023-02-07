@@ -17,7 +17,6 @@
 /* bouton du filtre */
 .btn{
     width: 90%;
-    min-width: 280px;
     max-width: 350px;
     height: 70px;
     background-color: $fondgris;
@@ -46,6 +45,12 @@
     i{
         margin: 0 25px 0 25px;
         opacity: 0.8;
+    }
+    span{
+        padding: 0 10px;
+        @media (max-width: 350px) {
+            font-size: 13px;
+        }
     }
 }
 

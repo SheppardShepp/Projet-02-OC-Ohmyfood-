@@ -177,7 +177,6 @@ body {
 /* bouton du filtre */
 .btn {
   width: 90%;
-  min-width: 280px;
   max-width: 350px;
   height: 70px;
   background-color: #f5f4f4;
@@ -212,6 +211,14 @@ body {
 .btn i {
   margin: 0 25px 0 25px;
   opacity: 0.8;
+}
+.btn span {
+  padding: 0 10px;
+}
+@media (max-width: 350px) {
+  .btn span {
+    font-size: 13px;
+  }
 }
 
 /* Bouton favoris menu */
@@ -270,9 +277,6 @@ header .header_logo {
   margin: auto;
 }
 
-.localisation {
-  height: 320px;
-}
 .localisation .formulaire {
   height: 60px;
   font-size: 18px;
