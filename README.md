@@ -1,6 +1,6 @@
 <h1 align="center">Projet-02-OC-Site_Ohmyfood-</h1>
 
-<div align="center"><img height="200" src="https://i.servimg.com/u/f31/13/52/99/79/sans_t12.png"></div>
+<div align="center"><img height="200" src="https://i31.servimg.com/u/f31/13/52/99/79/bandea12.png"></div>
 
 ## 📝 Sommaires
 
@@ -14,7 +14,7 @@ Dans le cadre de la formation, l'étape suivante à l'utilisation du langage HTM
 
 ---
 
-## :movie_camera: Scénaro du projet
+## :movie_camera: Scénario du projet
 
 Je vien d’être recruté chez Ohmyfood, en tant que développeur junior.
 
