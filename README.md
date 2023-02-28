@@ -7,6 +7,7 @@
 - [Présentation du projet](#présentation)
 - [Aperçu du projet](#projet)
 - [Spécification du projet](#specification)
+- [Mise en place du projet](#montage)
 
 ## 💭 Petit mot de présentation <a name = "présentation"></a>
 
@@ -32,7 +33,7 @@ L'objectif est de développer un site 100% mobile qui répertorie les menus de r
 
 ## ⛏️ Aperçu du projet <a name = "projet"></a>
 
-#### [Ohmyfood](https://sheppardshepp.github.io/Projet-02-OC-Ohmyfood-/) <a name = "ohmyfood"></a> : site 100% mobile qui répertorie les menus de restaurants gastronomiques
+#### [Ohmyfood](https://sheppardshepp.github.io/Projet-3---Ohmyfood/) <a name = "ohmyfood"></a> : site 100% mobile qui répertorie les menus de restaurants gastronomiques
 
 Objectif : Dynamisez une page web avec des animations CSS.
 
@@ -78,3 +79,17 @@ Aperçu :
   - Les pages devront passer la validation W3C en HTML et CSS sans erreur.
   - Le site doit être parfaitement compatible avec les dernières versions desktop de Chrome et Firefox.
   - Les effets accessibles au clic ou au survol devront utiliser les animations ou transitions CSS, pas de JavaScript ni de librairie.
+
+## :computer: Mise en place du projet <a name = "montage"></a>
+
+### Pré-requis pour son fonctionnement
+
+- Avoir "npm" sur sa machine
+
+### Pour la mise en place du projet il faut :
+
+- télécharger le dossier ZIP depuis GitHub.
+- décompresser le dossier avec les éléments.
+- ouvrir le dossier avec un éditeur de code.
+- ouvrir le terminal et saisir :
+  - "npm start" pour le lancement de Sass.
